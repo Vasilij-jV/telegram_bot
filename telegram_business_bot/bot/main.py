@@ -86,7 +86,6 @@ async def main():
     print("🚀 Запускаю бота через polling...")
 
     await dp.start_polling(bot)
-    print('asfd')
 
 
 if __name__ == "__main__":
