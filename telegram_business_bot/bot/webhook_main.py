@@ -1,4 +1,7 @@
 import asyncio
+import nest_asyncio
+nest_asyncio.apply()
+
 import logging
 from aiohttp import web
 from aiogram import Bot, Dispatcher, Router, F
