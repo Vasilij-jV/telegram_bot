@@ -85,8 +85,14 @@ async def main():
 
     # Создаем aiohttp-приложение
     app = web.Application()
-    dp.startup.register(lambda _: print("✅ Бот запущен"))
-    dp.shutdown.register(lambda _: print("❌ Бот остановлен"))
+
+    @dp.startup.register
+    async def on_startup(dispatcher: Dispatcher):
+        print("✅ Бот запущен")
+
+    @dp.shutdown.register
+    async def on_shutdown(dispatcher: Dispatcher):
+        print("❌ Бот остановлен")
 
     # Подключаем webhook
     from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
