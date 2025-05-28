@@ -100,5 +100,8 @@ async def create_app():
 
 # Для запуска через uvicorn:
 # PYTHONPATH=. uvicorn bot.webhook_main:app --host 0.0.0.0 --port 8000
-import asyncio
-app = asyncio.run(create_app())
+# import asyncio
+async def app_factory():
+    return await create_app()
+
+app = app_factory  # передаём именно функцию, а не результат
