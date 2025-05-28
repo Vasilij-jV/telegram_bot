@@ -25,7 +25,7 @@ WEBHOOK_URL = f"{DOMAIN}{WEBHOOK_PATH}"
 
 # ⚙️ Настройки сервера
 HOST = "0.0.0.0"
-PORT = 8000
+PORT = 8000dfg
 
 
 async def main():
