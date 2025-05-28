@@ -14,7 +14,7 @@ from bot.database import init_db
 
 # 🔐 Настройки webhook
 WEBHOOK_PATH = "/webhook"
-WEBHOOK_SECRET = "lksdflk834lhjkh*_"  # придумай что-то сложнее
+WEBHOOK_SECRET = "lksdflk834lhjkh12"  # придумай что-то сложнее
 DOMAIN = "https://yourdomain.com"  # замени на свой домен
 WEBHOOK_URL = f"{DOMAIN}{WEBHOOK_PATH}"
 
